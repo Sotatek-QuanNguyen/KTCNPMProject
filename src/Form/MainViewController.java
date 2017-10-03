@@ -33,7 +33,7 @@ public class MainViewController extends JPanel {
         
         //Add the tabbed pane to this panel.
         add(tabbedPane);
-        //The following line enables to use scrolling tabs.
+
         tabbedPane.setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
     }
      

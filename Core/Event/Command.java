@@ -7,7 +7,7 @@ public enum Command {
 	CQuanLyDSYC,CQuanLyDSDH,
 	RThemYC,
 	RXoaYC,
-	RSuaMH,
+	RSuaYC,
 	RTimKiemMH,
 	RCapNhatDSMH,
 	ChandleThemMH,
@@ -43,7 +43,7 @@ public enum Command {
         case 12:
         	return RXoaYC;
         case 13:
-        	return RSuaMH;
+        	return RSuaYC;
         case 14:
         	return RTimKiemMH;
         case 15:

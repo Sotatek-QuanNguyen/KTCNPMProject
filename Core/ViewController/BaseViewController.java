@@ -9,8 +9,8 @@ import Factory.FactoryController;
 import Controller.QuanLyFactoryController;
 
 public class BaseViewController extends JPanel implements Observer {
-	public FactoryController quanLyControler = new QuanLyFactoryController();
-	public Notifier notifier = Notifier.quanLyDSMHNotifier;
+	public FactoryController controller;
+	public Notifier notifier;
 	public void notifyObserver(Command command, Object data) {
 		notifier.notifyObserver(command.ordinal(), data);
 	}
