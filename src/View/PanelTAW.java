@@ -8,18 +8,18 @@ import Controller.BaseController;
 import Event.Command;
 import Model.DanhSachYeuCau;
 import Model.ObjectStatic;
+import Model.TAW;
 import Model.YeuCauChucNang;
 import ViewController.PanelQuanLy;
 
 public class PanelTAW extends PanelQuanLy<DanhSachYeuCau> {
 	protected BaseController<YeuCauChucNang> controllerGlobal;
 	public PanelTAW() {
-		System.out.println("1");
 		controllerGlobal = controller.takeConstroller(Command.CQuanLyDSYC);
 		setInputContent(new InputTAWView());
 		setImportExcel(new PanelImportExcelTAW());
 		setup();
-		setTitle("TINH TAW");
+		setTitle("TAW = ");
 		
 	}
 	@Override
@@ -27,8 +27,8 @@ public class PanelTAW extends PanelQuanLy<DanhSachYeuCau> {
 		// TODO Auto-generated method stub
 		super.update(command, data);
 		switch (command) {
-		case RThemYC:
-		
+		case ChangeTAW:
+		setTitle("TAW = "+object.getTaw().getTAW());
 			break;
 		case RSuaYC:
 		

@@ -43,9 +43,6 @@ public abstract class PanelQuanLy<T> extends BaseViewController {
 		object = ObjectStatic.shareInstance();
 		setup();
 	}
-//	public void setQuanLyView(PanelThemSuaXoa themSuaXoaView) {
-//		this.themSuaXoaView = themSuaXoaView;
-//	}
 	
 	public void setInputContent(BaseView viewInput) {
 		this.viewInput = viewInput;
@@ -54,24 +51,13 @@ public abstract class PanelQuanLy<T> extends BaseViewController {
 	public void setImportExcel(InputFromExcel importExcel) {
 		this.importExcel = importExcel;
 	}
-//	public void setBang(BangDuLieu bang) {
-//		this.bang = bang;
-//	}
 	
 	protected void setup() {
 		notifier.addObserver(this);
 		title = new JLabel("");
-		
-//		if (bang!=null && themSuaXoaView != null && viewInput != null){
-//			inputPanel.add(viewInput, BorderLayout.NORTH);
-//			inputPanel.add(new JScrollPane(bang),BorderLayout.CENTER);
-//			inputPanel.add(themSuaXoaView, BorderLayout.SOUTH);
-//		}
-		System.out.println("1");
 		if (viewInput != null) {
 			add(viewInput, BorderLayout.CENTER);
 			add(title, BorderLayout.NORTH);
-			System.out.println("2");
 		}
 		if(importExcel != null) {
 			add(importExcel, BorderLayout.SOUTH);

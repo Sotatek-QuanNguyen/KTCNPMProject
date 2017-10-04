@@ -20,8 +20,8 @@ public class PanelOutput extends PanelQuanLy<YeuCauChucNang>{
 		// TODO Auto-generated method stub
 		super.update(command, data);
 		switch (command) {
-		case RThemYC:
-		
+		case ChangeTAW:
+			((OutPutView)viewInput).getlTAW().setText(""+object.getTaw().getTAW());
 			break;
 		case RSuaYC:
 		
