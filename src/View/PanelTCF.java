@@ -13,7 +13,7 @@ public class PanelTCF extends PanelQuanLy<YeuCauChucNang>{
 		setInputContent(new InputTCFView());
 		setImportExcel(new PanelImportExcelTAW());
 		setup();
-		setTitle("TINH TBF");
+		setTitle("TCF = 0");
 		
 	}
 	@Override
@@ -21,8 +21,8 @@ public class PanelTCF extends PanelQuanLy<YeuCauChucNang>{
 		// TODO Auto-generated method stub
 		super.update(command, data);
 		switch (command) {
-		case RThemYC:
-		
+		case ChangeTCF:
+		setTitle("TCF = "+object.getTfw().getTCFval());
 			break;
 		case RSuaYC:
 		

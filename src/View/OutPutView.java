@@ -10,13 +10,13 @@ public class OutPutView extends BaseView {
 	private JLabel lC;
 	private JLabel lG;
 	private JLabel lH;
-	private Component lE;
-	private Component lP;
-	private Component lAUCP;
+	private JLabel lE;
+	private JLabel lP;
+	private JLabel lAUCP;
 	private JLabel lEF;
-	private Component lTCF;
+	private JLabel lTCF;
 	private JLabel lUUCP;
-	private Component lTBF;
+	private JLabel lTBF;
 	private JLabel lTAW;
 
 	@Override
@@ -155,7 +155,7 @@ setLayout(new GridLayout(1, 2, 0, 0));
 		return lE;
 	}
 
-	public void setlE(Component lE) {
+	public void setlE(JLabel lE) {
 		this.lE = lE;
 	}
 
@@ -163,7 +163,7 @@ setLayout(new GridLayout(1, 2, 0, 0));
 		return lP;
 	}
 
-	public void setlP(Component lP) {
+	public void setlP(JLabel lP) {
 		this.lP = lP;
 	}
 
@@ -171,7 +171,7 @@ setLayout(new GridLayout(1, 2, 0, 0));
 		return lAUCP;
 	}
 
-	public void setlAUCP(Component lAUCP) {
+	public void setlAUCP(JLabel lAUCP) {
 		this.lAUCP = lAUCP;
 	}
 
@@ -183,11 +183,11 @@ setLayout(new GridLayout(1, 2, 0, 0));
 		this.lEF = lEF;
 	}
 
-	public Component getlTCF() {
+	public JLabel getlTCF() {
 		return lTCF;
 	}
 
-	public void setlTCF(Component lTCF) {
+	public void setlTCF(JLabel lTCF) {
 		this.lTCF = lTCF;
 	}
 
@@ -199,11 +199,11 @@ setLayout(new GridLayout(1, 2, 0, 0));
 		this.lUUCP = lUUCP;
 	}
 
-	public Component getlTBF() {
+	public JLabel getlTBF() {
 		return lTBF;
 	}
 
-	public void setlTBF(Component lTBF) {
+	public void setlTBF(JLabel lTBF) {
 		this.lTBF = lTBF;
 	}
 

@@ -23,8 +23,8 @@ public class PanelOutput extends PanelQuanLy<YeuCauChucNang>{
 		case ChangeTAW:
 			((OutPutView)viewInput).getlTAW().setText(""+object.getTaw().getTAW());
 			break;
-		case RSuaYC:
-		
+		case ChangeTCF:
+			((OutPutView)viewInput).getlTCF().setText(""+object.getTfw().getTCFval());
 			break;
 		
 		case RXoaYC:

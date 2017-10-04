@@ -3,6 +3,10 @@ import java.awt.GridLayout;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+
+import Event.Command;
 
 public class InputTCFView extends BaseView {
 	private JTextField textField;
@@ -175,6 +179,362 @@ setLayout(new GridLayout(1, 3, 0, 0));
 		textField_12.setColumns(10);
 		panel.add(textField_12);
 		
+		textField.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField.getText().equals("")) {
+					object.getTfw().setGtHTPT(0);
+				}else {
+					object.getTfw().setGtHTPT(Integer.parseInt(textField.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtHTPT(Integer.parseInt(textField.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		textField_1.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField_1.getText().equals("")) {
+					object.getTfw().setGtDUTT(0);
+				}else {
+					object.getTfw().setGtDUTT(Integer.parseInt(textField_1.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtDUTT(Integer.parseInt(textField_1.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		textField_2.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField_2.getText().equals("")) {
+					object.getTfw().setGtHQSDTT(0);
+				}else {
+					object.getTfw().setGtHQSDTT(Integer.parseInt(textField_2.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtHQSDTT(Integer.parseInt(textField_2.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		textField_3.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField_3.getText().equals("")) {
+					object.getTfw().setGtDPTXL(0);
+				}else {
+					object.getTfw().setGtDPTXL(Integer.parseInt(textField_3.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtDPTXL(Integer.parseInt(textField_3.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		textField_4.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField_4.getText().equals("")) {
+					object.getTfw().setGtTSDMN(0);
+				}else {
+					object.getTfw().setGtTSDMN(Integer.parseInt(textField_4.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtTSDMN(Integer.parseInt(textField_4.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+	textField_5.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField_5.getText().equals("")) {
+					object.getTfw().setGtDSD(0);
+				}else {
+					object.getTfw().setGtDSD(Integer.parseInt(textField_5.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtDSD(Integer.parseInt(textField_5.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		textField_6.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField_6.getText().equals("")) {
+					object.getTfw().setGtDCD(0);
+				}else {
+					object.getTfw().setGtDCD(Integer.parseInt(textField_6.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtDCD(Integer.parseInt(textField_6.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		textField_7.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField_7.getText().equals("")) {
+					object.getTfw().setGtKNCD(0);
+				}else {
+					object.getTfw().setGtKNCD(Integer.parseInt(textField_7.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtKNCD(Integer.parseInt(textField_7.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		textField_8.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField_8.getText().equals("")) {
+					object.getTfw().setGtKNDTD(0);
+				}else {
+					object.getTfw().setGtKNDTD(Integer.parseInt(textField_8.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtKNDTD(Integer.parseInt(textField_8.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		textField_9.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField_9.getText().equals("")) {
+					object.getTfw().setGtSDDT(0);
+				}else {
+					object.getTfw().setGtSDDT(Integer.parseInt(textField_9.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtSDDT(Integer.parseInt(textField_9.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		textField_10.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField_10.getText().equals("")) {
+					object.getTfw().setGtBMDB(0);
+				}else {
+					object.getTfw().setGtBMDB(Integer.parseInt(textField_10.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtBMDB(Integer.parseInt(textField_10.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		textField_11.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField_11.getText().equals("")) {
+					object.getTfw().setGtTN3P(0);
+				}else {
+					object.getTfw().setGtTN3P(Integer.parseInt(textField_11.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtTN3P(Integer.parseInt(textField_11.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		textField_12.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(textField_12.getText().equals("")) {
+					object.getTfw().setGtPTDTDB(0);
+				}else {
+					object.getTfw().setGtPTDTDB(Integer.parseInt(textField_12.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTfw().setGtPTDTDB(Integer.parseInt(textField_12.getText()));
+				notifyObserver(Command.ChangeTCF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 	}
 
 }
