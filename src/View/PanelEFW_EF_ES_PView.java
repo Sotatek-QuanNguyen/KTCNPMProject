@@ -13,7 +13,7 @@ public class PanelEFW_EF_ES_PView extends PanelQuanLy<YeuCauChucNang> {
 		setInputContent(new InputEFW_EF_ES_PView());
 		setImportExcel(new PanelImportExcelTAW());
 		setup();
-		setTitle("TINH EF");
+		setTitle("EF = 0");
 		
 	}
 	@Override
@@ -21,7 +21,8 @@ public class PanelEFW_EF_ES_PView extends PanelQuanLy<YeuCauChucNang> {
 		// TODO Auto-generated method stub
 		super.update(command, data);
 		switch (command) {
-		case RThemYC:
+		case ChangeEF:
+                    setTitle(""+object.getEf().getEFval());
 		
 			break;
 		case RSuaYC:

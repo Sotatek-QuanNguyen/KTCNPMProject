@@ -7,6 +7,11 @@ public class ObjectStatic {
 	private TAW taw;
 	private TFW tfw;
         private TBF tbf;
+        private EF ef;
+
+        public EF getEf() {
+            return ef;
+        }
 
         public TBF getTbf() {
             return tbf;
@@ -45,6 +50,7 @@ public class ObjectStatic {
 		taw = new TAW();
 		tfw = new TFW(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
                 tbf = new TBF(0, 0, 0, 0, 0, 0, 0, 0, 0);
+                ef = new EF(0, 0, 0, 0, 0, 0, 0, 0);
 		listH = new Hs(new ArrayList<H>());
 	}
 	public TFW getTfw() {
