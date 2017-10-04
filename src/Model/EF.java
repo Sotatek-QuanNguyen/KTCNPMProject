@@ -109,6 +109,7 @@ public class EF {
         this.gtxhNNLTK = gtxhNNLTK;
     }
 
+    //return the results
     public float getEFWval() {
         this.EFWval = gtxhRUP*RUP + gtxhUDTT*UDTT + gtxhHDT*HDT + gtxhLDN*LDN + gtxhTCND*TCND + gtxhODYC*ODYC + gtxhNVBTG*NVBTG + gtxhNNLTK*NNLTK;
         return EFWval;
@@ -119,8 +120,6 @@ public class EF {
         return EFval;
     }
 
-    
-    
     public static void main(String[] args) {
         EF test = new EF(1,2,3,4,5,1,2,3);
         System.out.println(test.getEFWval());
