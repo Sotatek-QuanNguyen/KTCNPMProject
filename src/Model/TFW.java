@@ -30,6 +30,7 @@ public class TFW {
 	public static final float BMDB = 1;
 	public static final float TN3P = 1;
 	public static final float PTDTDB = 1;
+        
 	public TFW(float gtHTPT,float gtDUTT,float gtHQSDTT,float gtDPTXL,float gtTSDMN,float gtDSD,float gtDCD,float gtKNCD,float gtKNDTD,float gtSDDT,float gtBMDB,float gtTN3P,float gtPTDTDB){
 		this.gtHTPT = gtHTPT;
 		this.gtDUTT = gtDUTT;
@@ -44,7 +45,9 @@ public class TFW {
 		this.gtBMDB = gtBMDB;
 		this.gtTN3P = gtTN3P;
 		this.gtPTDTDB = gtPTDTDB;
-		this.TFWval = HTPT*gtHTPT+DUTT*gtDUTT+HQSDTT*gtHQSDTT+DPTXL*gtDPTXL+TSDMN*gtTSDMN+DSD*gtDSD+DCD*gtDCD+KNCD*gtKNCD+KNDTD*gtKNDTD+SDDT*gtSDDT+BMDB*gtBMDB+TN3P*gtTN3P+PTDTDB*gtPTDTDB;
+                
+                //calculated value
+                this.TFWval = HTPT*gtHTPT+DUTT*gtDUTT+HQSDTT*gtHQSDTT+DPTXL*gtDPTXL+TSDMN*gtTSDMN+DSD*gtDSD+DCD*gtDCD+KNCD*gtKNCD+KNDTD*gtKNDTD+SDDT*gtSDDT+BMDB*gtBMDB+TN3P*gtTN3P+PTDTDB*gtPTDTDB;	
 		this.TCFval = 0.6f + (0.01f * TFWval);
 	}
 	public float getGtHTPT() {
@@ -125,17 +128,15 @@ public class TFW {
 	public void setGtPTDTDB(float gtPTDTDB) {
 		this.gtPTDTDB = gtPTDTDB;
 	}
+        
+        //return the results
 	public float getTFWval() {
-		return TFWval;
-	}
-	public void setTFWval(float tFWval) {
-		TFWval = tFWval;
+                this.TFWval = HTPT*gtHTPT+DUTT*gtDUTT+HQSDTT*gtHQSDTT+DPTXL*gtDPTXL+TSDMN*gtTSDMN+DSD*gtDSD+DCD*gtDCD+KNCD*gtKNCD+KNDTD*gtKNDTD+SDDT*gtSDDT+BMDB*gtBMDB+TN3P*gtTN3P+PTDTDB*gtPTDTDB;
+		return this.TFWval;
 	}
 	public float getTCFval() {
-		return TCFval;
-	}
-	public void setTCFval(float tCFval) {
-		TCFval = tCFval;
+		this.TCFval = 0.6f + (0.01f * this.getTFWval());
+		return this.TCFval;
 	}
 	
 	
