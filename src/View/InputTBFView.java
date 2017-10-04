@@ -1,12 +1,16 @@
 package View;
+import Event.Command;
 import java.awt.GridLayout;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.border.BevelBorder;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 public class InputTBFView extends BaseView {
 	private JTextField tT_easy;
+        private JTextField tT_normal;
 	private JTextField tT_hard;
 	private JTextField tB_easy;
 	private JTextField tB_mornal;
@@ -166,8 +170,9 @@ setLayout(new GridLayout(3, 1, 0, 20));
 		
 		JLabel label_3 = new JLabel("1");
 		panel_1.add(label_3);
-		JTextField tT_mornal = new JTextField();
-		panel_1.add(tT_mornal);
+                
+		tT_normal = new JTextField();
+		panel_1.add(tT_normal);
 		
 		JLabel lblPhcTp = new JLabel("Phức tạp");
 		panel_1.add(lblPhcTp);
@@ -180,6 +185,268 @@ setLayout(new GridLayout(3, 1, 0, 20));
 		
 		tT_hard = new JTextField();
 		panel_1.add(tT_hard);
+                
+                tT_easy.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e)  {
+				// TODO Auto-generated method stub
+				if(tT_easy.getText().equals("")) {
+					object.getTbf().setSlT1(0);
+				}else {
+					object.getTbf().setSlT1(Integer.parseInt(tT_easy.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTbf().setSlT1(Integer.parseInt(tT_easy.getText()));
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+
+tT_normal.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e)  {
+				// TODO Auto-generated method stub
+				if(tT_normal.getText().equals("")) {
+					object.getTbf().setSlT2(0);
+				}else {
+					object.getTbf().setSlT2(Integer.parseInt(tT_normal.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTbf().setSlT2(Integer.parseInt(tT_normal.getText()));
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+
+tT_hard.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e)  {
+				// TODO Auto-generated method stub
+				if(tT_hard.getText().equals("")) {
+					object.getTbf().setSlT3(0);
+				}else {
+					object.getTbf().setSlT3(Integer.parseInt(tT_hard.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTbf().setSlT3(Integer.parseInt(tT_hard.getText()));
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+
+tB_easy.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e)  {
+				// TODO Auto-generated method stub
+				if(tB_easy.getText().equals("")) {
+					object.getTbf().setSlB1(0);
+				}else {
+					object.getTbf().setSlB1(Integer.parseInt(tB_easy.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTbf().setSlB1(Integer.parseInt(tB_easy.getText()));
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+
+tB_mornal.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e)  {
+				// TODO Auto-generated method stub
+				if(tB_mornal.getText().equals("")) {
+					object.getTbf().setSlB2(0);
+				}else {
+					object.getTbf().setSlB2(Integer.parseInt(tB_mornal.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTbf().setSlB2(Integer.parseInt(tB_mornal.getText()));
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+
+tB_hard.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e)  {
+				// TODO Auto-generated method stub
+				if(tB_hard.getText().equals("")) {
+					object.getTbf().setSlB3(0);
+				}else {
+					object.getTbf().setSlB3(Integer.parseInt(tB_hard.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTbf().setSlB3(Integer.parseInt(tB_hard.getText()));
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+
+tM_easy.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e)  {
+				// TODO Auto-generated method stub
+				if(tM_easy.getText().equals("")) {
+					object.getTbf().setSlM1(0);
+				}else {
+					object.getTbf().setSlM1(Integer.parseInt(tM_easy.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTbf().setSlM1(Integer.parseInt(tM_easy.getText()));
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+
+tM_mornal.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e)  {
+				// TODO Auto-generated method stub
+				if(tM_mornal.getText().equals("")) {
+					object.getTbf().setSlM2(0);
+				}else {
+					object.getTbf().setSlM2(Integer.parseInt(tM_mornal.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTbf().setSlM2(Integer.parseInt(tM_mornal.getText()));
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+
+tM_hard.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e)  {
+				// TODO Auto-generated method stub
+				if(tM_hard.getText().equals("")) {
+					object.getTbf().setSlM3(0);
+				}else {
+					object.getTbf().setSlM3(Integer.parseInt(tM_hard.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTbf().setSlM3(Integer.parseInt(tM_hard.getText()));
+				notifyObserver(Command.ChangeTBF, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+
 	}
 
 }

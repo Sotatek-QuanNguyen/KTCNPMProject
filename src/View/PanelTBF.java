@@ -13,7 +13,7 @@ public class PanelTBF extends PanelQuanLy<YeuCauChucNang>{
 		setInputContent(new InputTBFView());
 		setImportExcel(new PanelImportExcelTAW());
 		setup();
-		setTitle("TINH TBF");
+		setTitle("TBF = 0");
 		
 	}
 	@Override
@@ -21,8 +21,9 @@ public class PanelTBF extends PanelQuanLy<YeuCauChucNang>{
 		// TODO Auto-generated method stub
 		super.update(command, data);
 		switch (command) {
-		case RThemYC:
-		
+		case ChangeTBF:
+                    setTitle(""+object.getTbf().getTBFval());
+                    System.out.println("----------");
 			break;
 		case RSuaYC:
 		
