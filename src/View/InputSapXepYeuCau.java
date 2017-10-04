@@ -3,7 +3,7 @@ package View;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class InputSapXepYeuCau extends PanelInput{
+public class InputSapXepYeuCau extends BaseView{
 	private JTextField fMota;
 	private JTextField fPhanLoai;
 	public InputSapXepYeuCau() {
@@ -24,9 +24,6 @@ public class InputSapXepYeuCau extends PanelInput{
 	}
 	@Override
 	protected void setup() {
-		// TODO Auto-generated method stub
-		super.setup();
-		// TODO Auto-generated method stub
 		JLabel motaLabel = new JLabel("Mo Ta");
 		fMota = new JTextField(20);
 		JLabel phanloaiLabel = new JLabel("Phan Loai");

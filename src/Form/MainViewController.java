@@ -13,7 +13,14 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
-import View.PanelSapXepThuTuUuTien;
+
+import Database.SoftwareCost;
+import View.PanelEFW_EF_ES_PView;
+import View.PanelH;
+import View.PanelOutput;
+import View.PanelTAW;
+import View.PanelTBF;
+import View.PanelTCF;
 
 public class MainViewController extends JPanel {
     public MainViewController() {
@@ -22,10 +29,19 @@ public class MainViewController extends JPanel {
         JTabbedPane tabbedPane = new JTabbedPane();
         ImageIcon icon = createImageIcon("");
          
-        PanelSapXepThuTuUuTien panel1 = new PanelSapXepThuTuUuTien();
-        tabbedPane.addTab("Sắp xếp thứ tự ưu tiên", icon, panel1);         
-//        JPanel panel2 = new quanly.qlsite.PanelQuanLySite();
-//        tabbedPane.addTab("Quan Ly Site", icon, panel2,
+        PanelTAW panel1 = new PanelTAW();
+    	System.out.println("1");
+        tabbedPane.addTab("TAW", icon, panel1);         
+        JPanel panel2 = new PanelTBF();
+        tabbedPane.addTab("TBF", icon, panel2);
+        JPanel panel3 = new PanelTCF();
+        tabbedPane.addTab("TCF", icon, panel3);
+        JPanel panel4 = new PanelEFW_EF_ES_PView();
+        tabbedPane.addTab("EF", icon, panel4);         
+        JPanel panel5 = new PanelH();
+        tabbedPane.addTab("H", icon, panel5);
+        JPanel panel6 = new PanelOutput();
+        tabbedPane.addTab("Result", icon, panel6);
 //                "Does twice as much nothing");
 //        JPanel panel3 = new PanelQuanLyDonHangSite();
 //        tabbedPane.addTab("Quan Ly Don Hang Site", icon, panel3,
@@ -33,7 +49,6 @@ public class MainViewController extends JPanel {
         
         //Add the tabbed pane to this panel.
         add(tabbedPane);
-
         tabbedPane.setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
     }
      
@@ -64,7 +79,8 @@ public class MainViewController extends JPanel {
      */
     private static void createAndShowGUI() {
         //Create and set up the window.
-        JFrame frame = new JFrame("Quản Lý Hệ Thống");
+        JFrame frame = new JFrame("PHẦN MỀM TÍNH CHI PHÍ PHÁT TRIỂN PHẦN MỀM");
+//    	JFrame frame = new SoftwareCost();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          
         //Add content to the window.
@@ -72,7 +88,7 @@ public class MainViewController extends JPanel {
          
         //Display the window.
 //        frame.pack();
-        frame.setSize(1000, 600);
+        frame.setSize(1000, 500);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
@@ -87,5 +103,7 @@ public class MainViewController extends JPanel {
         createAndShowGUI();
             }
         });
+
+    	
     }
 }

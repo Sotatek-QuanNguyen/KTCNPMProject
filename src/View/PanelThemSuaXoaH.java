@@ -3,9 +3,9 @@ package View;
 
 import Event.Command;
 
-public class PanelThemSuaXoaDanhSachYeuCau extends PanelThemSuaXoa{
+public class PanelThemSuaXoaH extends PanelThemSuaXoa{
 	
-	public PanelThemSuaXoaDanhSachYeuCau() {
+	public PanelThemSuaXoaH() {
 		// TODO Auto-generated constructor stub
 		super.setup();
 	}

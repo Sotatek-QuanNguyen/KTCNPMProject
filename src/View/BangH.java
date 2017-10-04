@@ -10,12 +10,12 @@ import javax.swing.table.DefaultTableModel;
 import Model.DanhSachYeuCau;
 import Model.YeuCauChucNang;
 
-public class BangDuLieuDanhSachYeuCau extends BangDuLieu<DanhSachYeuCau> {
+public class BangH extends BangDuLieu<DanhSachYeuCau> {
 
 	public void setInputData(DanhSachYeuCau data) {
 		//headers for the table
         String[] columns = new String[] {
-            "STT","Mô tả ","Phân Loại"
+            "STT","Mức lương/tháng (đồng)","Số lượng cán bộ"
         };
         
         //actual data for the table in a 2d array

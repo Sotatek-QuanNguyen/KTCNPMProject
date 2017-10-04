@@ -27,25 +27,30 @@ import java.awt.GridLayout;
 /**
  * @param <T> Data Type transfered between FormTimKiem and BangDuLieu
  */
-public abstract class PanelQuanLy<T> extends BaseViewController {
+public abstract class PanelQuanLy2<T> extends BaseViewController {
 	private JLabel title;
-//	protected BangDuLieu<T> bang;
-//	protected PanelThemSuaXoa themSuaXoaView;
+	protected BangDuLieu<T> bang;
+	protected PanelThemSuaXoa themSuaXoaView;
 	protected BaseView viewInput;
 	protected ObjectStatic object;
 	protected InputFromExcel importExcel;
+	protected JPanel panel;
 
-	public PanelQuanLy() {
+	public PanelQuanLy2() {
 		setLayout(new BorderLayout(0, 0));
+		
+		panel = new JPanel();
+		add(panel, BorderLayout.SOUTH);
+		panel.setLayout(new GridLayout(2, 1, 0, 0));
 		// TODO Auto-generated constructor stub
 		controller = new QuanLyFactoryController();
 		notifier = Notifier.controllerNotifier;
 		object = ObjectStatic.shareInstance();
 		setup();
 	}
-//	public void setQuanLyView(PanelThemSuaXoa themSuaXoaView) {
-//		this.themSuaXoaView = themSuaXoaView;
-//	}
+	public void setQuanLyView(PanelThemSuaXoa themSuaXoaView) {
+		this.themSuaXoaView = themSuaXoaView;
+	}
 	
 	public void setInputContent(BaseView viewInput) {
 		this.viewInput = viewInput;
@@ -54,9 +59,9 @@ public abstract class PanelQuanLy<T> extends BaseViewController {
 	public void setImportExcel(InputFromExcel importExcel) {
 		this.importExcel = importExcel;
 	}
-//	public void setBang(BangDuLieu bang) {
-//		this.bang = bang;
-//	}
+	public void setBang(BangDuLieu bang) {
+		this.bang = bang;
+	}
 	
 	protected void setup() {
 		notifier.addObserver(this);
@@ -68,13 +73,13 @@ public abstract class PanelQuanLy<T> extends BaseViewController {
 //			inputPanel.add(themSuaXoaView, BorderLayout.SOUTH);
 //		}
 		System.out.println("1");
-		if (viewInput != null) {
-			add(viewInput, BorderLayout.CENTER);
+		if (viewInput != null && importExcel != null && bang != null && themSuaXoaView != null) {
 			add(title, BorderLayout.NORTH);
+			add(viewInput, BorderLayout.NORTH);
+			panel.add(importExcel);
+			add(bang, BorderLayout.CENTER);
+			panel.add(themSuaXoaView);
 			System.out.println("2");
-		}
-		if(importExcel != null) {
-			add(importExcel, BorderLayout.SOUTH);
 		}
 
 	}
@@ -97,3 +102,4 @@ public abstract class PanelQuanLy<T> extends BaseViewController {
 		this.title.setText(title);
 	}
 }
+
