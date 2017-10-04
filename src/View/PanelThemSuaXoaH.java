@@ -7,7 +7,6 @@ public class PanelThemSuaXoaH extends PanelThemSuaXoa{
 	
 	public PanelThemSuaXoaH() {
 		// TODO Auto-generated constructor stub
-		super.setup();
 	}
 
 	@Override

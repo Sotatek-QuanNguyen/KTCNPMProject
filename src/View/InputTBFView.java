@@ -225,7 +225,7 @@ tT_normal.getDocument().addDocumentListener(new DocumentListener() {
 				}else {
 					object.getTbf().setSlT2(Integer.parseInt(tT_normal.getText()));
 				}
-				
+				System.out.println("213123123");
 				notifyObserver(Command.ChangeTBF, null);
 			}
 			

@@ -1,7 +1,10 @@
 package View;
 
+import java.util.ArrayList;
+
 import Controller.BaseController;
 import Event.Command;
+import Model.H;
 import Model.YeuCauChucNang;
 import ViewController.PanelQuanLy2;
 
@@ -14,7 +17,7 @@ public class PanelH extends PanelQuanLy2<YeuCauChucNang>{
 		setQuanLyView(new PanelThemSuaXoaH());
 		setImportExcel(new PanelImportExcelTAW());
 		setup();
-		setTitle("TINH EF");
+		setTitle("H = 0");
 		
 	}
 	@Override
@@ -23,7 +26,9 @@ public class PanelH extends PanelQuanLy2<YeuCauChucNang>{
 		super.update(command, data);
 		switch (command) {
 		case RThemYC:
-		
+		H h = new H(Float.parseFloat((((HView)viewInput).getfMucLuong().getText())), Integer.parseInt((((HView)viewInput).getfSoCanBo().getText())));
+		object.getListH().getListH().add(h);
+		capNhatDuLieu(object.getListH().getListH());
 			break;
 		case RSuaYC:
 		
@@ -36,6 +41,10 @@ public class PanelH extends PanelQuanLy2<YeuCauChucNang>{
 		default:
 			break;
 		}
+	}
+	private void capNhatDuLieu(ArrayList<H> data) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

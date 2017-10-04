@@ -22,8 +22,7 @@ public class PanelTBF extends PanelQuanLy<YeuCauChucNang>{
 		super.update(command, data);
 		switch (command) {
 		case ChangeTBF:
-                    setTitle(""+object.getTbf().getTBFval());
-                    System.out.println("----------");
+             setTitle(""+object.getTbf().getTBFval());
 			break;
 		case RSuaYC:
 		

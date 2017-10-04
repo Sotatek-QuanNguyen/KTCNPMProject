@@ -66,20 +66,14 @@ public abstract class PanelQuanLy2<T> extends BaseViewController {
 	protected void setup() {
 		notifier.addObserver(this);
 		title = new JLabel("");
-		
-//		if (bang!=null && themSuaXoaView != null && viewInput != null){
-//			inputPanel.add(viewInput, BorderLayout.NORTH);
-//			inputPanel.add(new JScrollPane(bang),BorderLayout.CENTER);
-//			inputPanel.add(themSuaXoaView, BorderLayout.SOUTH);
-//		}
+	
 		System.out.println("1");
 		if (viewInput != null && importExcel != null && bang != null && themSuaXoaView != null) {
-			add(title, BorderLayout.NORTH);
+//			add(title, BorderLayout.NORTH);
 			add(viewInput, BorderLayout.NORTH);
 			panel.add(importExcel);
 			add(bang, BorderLayout.CENTER);
 			panel.add(themSuaXoaView);
-			System.out.println("2");
 		}
 
 	}

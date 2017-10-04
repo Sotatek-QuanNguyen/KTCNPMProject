@@ -4,7 +4,6 @@ import javax.swing.JPanel;
 
 import Event.Command;
 import Event.Notifier;
-import Event.Observer;
 import Model.ObjectStatic;
 
 public abstract class BaseView extends JPanel{

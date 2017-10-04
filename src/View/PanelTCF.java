@@ -13,7 +13,7 @@ public class PanelTCF extends PanelQuanLy<YeuCauChucNang>{
 		setInputContent(new InputTCFView());
 		setImportExcel(new PanelImportExcelTAW());
 		setup();
-		setTitle("TCF = 0");
+		setTitle("TCF = 0.6");
 		
 	}
 	@Override

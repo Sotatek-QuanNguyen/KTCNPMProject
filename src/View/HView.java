@@ -41,4 +41,24 @@ public class HView extends BaseView{
 		fSoCanBo.setColumns(10);
 	}
 
+
+	public JTextField getfMucLuong() {
+		return fMucLuong;
+	}
+
+
+	public void setfMucLuong(JTextField fMucLuong) {
+		this.fMucLuong = fMucLuong;
+	}
+
+
+	public JTextField getfSoCanBo() {
+		return fSoCanBo;
+	}
+
+
+	public void setfSoCanBo(JTextField fSoCanBo) {
+		this.fSoCanBo = fSoCanBo;
+	}
+
 }
