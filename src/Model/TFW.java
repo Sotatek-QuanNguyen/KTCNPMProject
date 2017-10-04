@@ -1,19 +1,19 @@
 package Model;
 
 public class TFW {
-	private float gtHTPT;
-	private float gtDUTT;
-	private float gtHQSDTT;
-	private float gtDPTXL;
-	private float gtTSDMN;
-	private float gtDSD;
-	private float gtDCD;
-	private float gtKNCD;
-	private float gtKNDTD;
-	private float gtSDDT;
-	private float gtBMDB;
-	private float gtTN3P;
-	private float gtPTDTDB;
+	private int gtHTPT;
+	private int gtDUTT;
+	private int gtHQSDTT;
+	private int gtDPTXL;
+	private int gtTSDMN;
+	private int gtDSD;
+	private int gtDCD;
+	private int gtKNCD;
+	private int gtKNDTD;
+	private int gtSDDT;
+	private int gtBMDB;
+	private int gtTN3P;
+	private int gtPTDTDB;
 	private float TFWval;
 	private float TCFval;
 	
@@ -31,7 +31,7 @@ public class TFW {
 	public static final float TN3P = 1;
 	public static final float PTDTDB = 1;
         
-	public TFW(float gtHTPT,float gtDUTT,float gtHQSDTT,float gtDPTXL,float gtTSDMN,float gtDSD,float gtDCD,float gtKNCD,float gtKNDTD,float gtSDDT,float gtBMDB,float gtTN3P,float gtPTDTDB){
+	public TFW(int gtHTPT,int gtDUTT,int gtHQSDTT,int gtDPTXL,int gtTSDMN,int gtDSD,int gtDCD,int gtKNCD,int gtKNDTD,int gtSDDT,int gtBMDB,int gtTN3P,int gtPTDTDB){
 		this.gtHTPT = gtHTPT;
 		this.gtDUTT = gtDUTT;
 		this.gtHQSDTT = gtHQSDTT;
@@ -53,79 +53,79 @@ public class TFW {
 	public float getGtHTPT() {
 		return gtHTPT;
 	}
-	public void setGtHTPT(float gtHTPT) {
+	public void setGtHTPT(int gtHTPT) {
 		this.gtHTPT = gtHTPT;
 	}
-	public float getGtDUTT() {
+	public int getGtDUTT() {
 		return gtDUTT;
 	}
-	public void setGtDUTT(float gtDUTT) {
+	public void setGtDUTT(int gtDUTT) {
 		this.gtDUTT = gtDUTT;
 	}
-	public float getGtHQSDTT() {
+	public int getGtHQSDTT() {
 		return gtHQSDTT;
 	}
-	public void setGtHQSDTT(float gtHQSDTT) {
+	public void setGtHQSDTT(int gtHQSDTT) {
 		this.gtHQSDTT = gtHQSDTT;
 	}
-	public float getGtDPTXL() {
+	public int getGtDPTXL() {
 		return gtDPTXL;
 	}
-	public void setGtDPTXL(float gtDPTXL) {
+	public void setGtDPTXL(int gtDPTXL) {
 		this.gtDPTXL = gtDPTXL;
 	}
-	public float getGtTSDMN() {
+	public int getGtTSDMN() {
 		return gtTSDMN;
 	}
-	public void setGtTSDMN(float gtTSDMN) {
+	public void setGtTSDMN(int gtTSDMN) {
 		this.gtTSDMN = gtTSDMN;
 	}
-	public float getGtDSD() {
+	public int getGtDSD() {
 		return gtDSD;
 	}
-	public void setGtDSD(float gtDSD) {
+	public void setGtDSD(int gtDSD) {
 		this.gtDSD = gtDSD;
 	}
-	public float getGtDCD() {
+	public int getGtDCD() {
 		return gtDCD;
 	}
-	public void setGtDCD(float gtDCD) {
+	public void setGtDCD(int gtDCD) {
 		this.gtDCD = gtDCD;
 	}
-	public float getGtKNCD() {
+	public int getGtKNCD() {
 		return gtKNCD;
 	}
-	public void setGtKNCD(float gtKNCD) {
+	public void setGtKNCD(int gtKNCD) {
 		this.gtKNCD = gtKNCD;
 	}
-	public float getGtKNDTD() {
+	public int getGtKNDTD() {
 		return gtKNDTD;
 	}
-	public void setGtKNDTD(float gtKNDTD) {
+	public void setGtKNDTD(int gtKNDTD) {
 		this.gtKNDTD = gtKNDTD;
 	}
-	public float getGtSDDT() {
+	public int getGtSDDT() {
 		return gtSDDT;
 	}
-	public void setGtSDDT(float gtSDDT) {
+	public void setGtSDDT(int gtSDDT) {
 		this.gtSDDT = gtSDDT;
 	}
-	public float getGtBMDB() {
+	public int getGtBMDB() {
 		return gtBMDB;
 	}
-	public void setGtBMDB(float gtBMDB) {
+	public void setGtBMDB(int gtBMDB) {
 		this.gtBMDB = gtBMDB;
 	}
-	public float getGtTN3P() {
+	public int getGtTN3P() {
 		return gtTN3P;
 	}
-	public void setGtTN3P(float gtTN3P) {
+	public void setGtTN3P(int gtTN3P) {
 		this.gtTN3P = gtTN3P;
 	}
-	public float getGtPTDTDB() {
+	public int getGtPTDTDB() {
 		return gtPTDTDB;
 	}
-	public void setGtPTDTDB(float gtPTDTDB) {
+	public void setGtPTDTDB(int gtPTDTDB) {
 		this.gtPTDTDB = gtPTDTDB;
 	}
         
