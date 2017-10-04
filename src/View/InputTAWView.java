@@ -5,6 +5,11 @@ import javax.swing.JLabel;
 import java.awt.FlowLayout;
 import javax.swing.JTextField;
 import javax.swing.border.BevelBorder;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+
+import Model.ObjectStatic;
+import Event.Command;
 
 public class InputTAWView extends BaseView{
 	public InputTAWView() {
@@ -121,6 +126,85 @@ setLayout(new GridLayout(3, 1, 0, 20));
 		f_hard = new JTextField();
 		f_hard.setColumns(10);
 		panel_5.add(f_hard);
+		
+		f_easy.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTaw().setEasyNumber(Integer.parseInt(f_easy.getText()));
+				notifyObserver(Command.ChangeTAW, null);
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				if(f_easy.getText().equals("")) {
+					object.getTaw().setEasyNumber(0);
+				}else {
+					object.getTaw().setEasyNumber(Integer.parseInt(f_easy.getText()));
+				}
+				notifyObserver(Command.ChangeTAW, null);
+				
+			}
+		});
+		f_normal.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(f_normal.getText().equals("")){
+					object.getTaw().setNormalNumber(0);
+				}else {
+					object.getTaw().setNormalNumber(Integer.parseInt(f_normal.getText()));
+				}
+				notifyObserver(Command.ChangeTAW, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTaw().setNormalNumber(Integer.parseInt(f_normal.getText()));
+				notifyObserver(Command.ChangeTAW, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		f_hard.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				if(f_hard.getText().equals("")) {
+					object.getTaw().setHardNumber(0);
+				}else {
+					object.getTaw().setHardNumber(Integer.parseInt(f_hard.getText()));
+				}
+				
+				notifyObserver(Command.ChangeTAW, null);
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				object.getTaw().setHardNumber(Integer.parseInt(f_hard.getText()));
+				notifyObserver(Command.ChangeTAW, null);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+			
+			}
+		});
 	}
 
 }

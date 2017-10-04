@@ -1,7 +1,7 @@
 package Event;
 
 public enum Command {
-	QLDSDHThem,QLDSDHSua,QLDSDHXoa,QLDSDHTimKiem,
+	ChangeTAW,QLDSDHSua,QLDSDHXoa,QLDSDHTimKiem,
 	VShowFormThemMH,VShowFormSuaMH,CHandleXoaMH,CHandleTimKiemMH,
 	Error,
 	CQuanLyDSYC,CQuanLyDSDH,
@@ -17,7 +17,7 @@ public enum Command {
 	public static Command fromInteger(int x) {
         switch(x) {
         case 0:
-            return QLDSDHThem;
+            return ChangeTAW;
         case 1:
             return QLDSDHSua;
         case 2:

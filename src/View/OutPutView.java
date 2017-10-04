@@ -1,11 +1,28 @@
 package View;
+import java.awt.Component;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class OutPutView extends BaseView {
-	public OutPutView() {
-		setLayout(new GridLayout(1, 2, 0, 0));
+	private JLabel lGpm;
+	private JLabel lLT;
+	private JLabel lC;
+	private JLabel lG;
+	private JLabel lH;
+	private Component lE;
+	private Component lP;
+	private Component lAUCP;
+	private JLabel lEF;
+	private Component lTCF;
+	private JLabel lUUCP;
+	private Component lTBF;
+	private JLabel lTAW;
+
+	@Override
+	protected void setup() {
+		// TODO Auto-generated method stub
+setLayout(new GridLayout(1, 2, 0, 0));
 		
 		JPanel panel_1 = new JPanel();
 		add(panel_1);
@@ -54,50 +71,148 @@ public class OutPutView extends BaseView {
 		add(panel);
 		panel.setLayout(new GridLayout(16, 1, 0, 0));
 		
-		JLabel label_12 = new JLabel("0");
-		panel.add(label_12);
+		lTAW = new JLabel("0");
+		panel.add(lTAW);
 		
-		JLabel label_13 = new JLabel("0");
-		panel.add(label_13);
+		lTBF = new JLabel("0");
+		panel.add(lTBF);
 		
-		JLabel label_14 = new JLabel("0");
-		panel.add(label_14);
+		lUUCP = new JLabel("0");
+		panel.add(lUUCP);
 		
-		JLabel label_15 = new JLabel("0");
-		panel.add(label_15);
+		lTCF = new JLabel("0");
+		panel.add(lTCF);
 		
-		JLabel label_16 = new JLabel("0");
-		panel.add(label_16);
+		lEF = new JLabel("0");
+		panel.add(lEF);
 		
-		JLabel label_17 = new JLabel("0");
-		panel.add(label_17);
+		lAUCP = new JLabel("0");
+		panel.add(lAUCP);
 		
-		JLabel label_18 = new JLabel("0");
-		panel.add(label_18);
+		lP = new JLabel("0");
+		panel.add(lP);
 		
-		JLabel label_19 = new JLabel("0");
-		panel.add(label_19);
+		lE = new JLabel("0");
+		panel.add(lE);
 		
-		JLabel label_20 = new JLabel("0");
-		panel.add(label_20);
+		lH = new JLabel("0");
+		panel.add(lH);
 		
-		JLabel label_21 = new JLabel("0");
-		panel.add(label_21);
+		lG = new JLabel("0");
+		panel.add(lG);
 		
-		JLabel label_22 = new JLabel("0");
-		panel.add(label_22);
+		lC = new JLabel("0");
+		panel.add(lC);
 		
-		JLabel label_23 = new JLabel("0");
-		panel.add(label_23);
+		lLT = new JLabel("0");
+		panel.add(lLT);
 		
-		JLabel label_24 = new JLabel("0");
-		panel.add(label_24);
+		lGpm = new JLabel("0");
+		panel.add(lGpm);
 	}
 
-	@Override
-	protected void setup() {
-		// TODO Auto-generated method stub
-		
+	public JLabel getlGpm() {
+		return lGpm;
+	}
+
+	public void setlGpm(JLabel lGpm) {
+		this.lGpm = lGpm;
+	}
+
+	public JLabel getlLT() {
+		return lLT;
+	}
+
+	public void setlLT(JLabel lLT) {
+		this.lLT = lLT;
+	}
+
+	public JLabel getlC() {
+		return lC;
+	}
+
+	public void setlC(JLabel lC) {
+		this.lC = lC;
+	}
+
+	public JLabel getlG() {
+		return lG;
+	}
+
+	public void setlG(JLabel lG) {
+		this.lG = lG;
+	}
+
+	public JLabel getlH() {
+		return lH;
+	}
+
+	public void setlH(JLabel lH) {
+		this.lH = lH;
+	}
+
+	public Component getlE() {
+		return lE;
+	}
+
+	public void setlE(Component lE) {
+		this.lE = lE;
+	}
+
+	public Component getlP() {
+		return lP;
+	}
+
+	public void setlP(Component lP) {
+		this.lP = lP;
+	}
+
+	public Component getlAUCP() {
+		return lAUCP;
+	}
+
+	public void setlAUCP(Component lAUCP) {
+		this.lAUCP = lAUCP;
+	}
+
+	public JLabel getlEF() {
+		return lEF;
+	}
+
+	public void setlEF(JLabel lEF) {
+		this.lEF = lEF;
+	}
+
+	public Component getlTCF() {
+		return lTCF;
+	}
+
+	public void setlTCF(Component lTCF) {
+		this.lTCF = lTCF;
+	}
+
+	public JLabel getlUUCP() {
+		return lUUCP;
+	}
+
+	public void setlUUCP(JLabel lUUCP) {
+		this.lUUCP = lUUCP;
+	}
+
+	public Component getlTBF() {
+		return lTBF;
+	}
+
+	public void setlTBF(Component lTBF) {
+		this.lTBF = lTBF;
+	}
+
+	public JLabel getlTAW() {
+		return lTAW;
+	}
+
+	public void setlTAW(JLabel lTAW) {
+		this.lTAW = lTAW;
 	}
 
 }

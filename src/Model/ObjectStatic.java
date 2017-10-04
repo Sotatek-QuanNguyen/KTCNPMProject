@@ -2,7 +2,13 @@ package Model;
 
 public class ObjectStatic {
 	private static ObjectStatic instance;
-	private DanhSachYeuCau listYCCN;
+	private TAW taw;
+	public TAW getTaw() {
+		return taw;
+	}
+	public void setTaw(TAW taw) {
+		this.taw = taw;
+	}
 	public static ObjectStatic shareInstance() {
 		if(instance == null) {
 			instance = new ObjectStatic();
@@ -10,8 +16,7 @@ public class ObjectStatic {
 		return instance;
 	}
 	public ObjectStatic() {
-		// TODO Auto-generated constructor stub
-		System.out.println("instance");
+		taw = new TAW();
 	}
 	
 }
