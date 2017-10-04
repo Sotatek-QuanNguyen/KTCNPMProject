@@ -3,6 +3,8 @@ package View;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
 import Model.DanhSachYeuCau;
@@ -30,5 +32,6 @@ public class BangDuLieuDanhSachYeuCau extends BangDuLieu<DanhSachYeuCau> {
 		}
 		setModel(model);
 	}
+	
 
 }

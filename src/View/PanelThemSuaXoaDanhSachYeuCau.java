@@ -19,13 +19,13 @@ public class PanelThemSuaXoaDanhSachYeuCau extends PanelThemSuaXoa{
 	@Override
 	protected void handleEventSua() {
 		// TODO Auto-generated method stub
-		notifyObserver(Command.VShowFormSuaMH, null);
+		notifyObserver(Command.RSuaYC, null);
 
 	}
 
 	@Override
 	protected void handleEventXoa() {
 		// TODO Auto-generated method stub
-		notifyObserver(Command.CHandleXoaMH, null);
+		notifyObserver(Command.RXoaYC, null);
 	}
 }

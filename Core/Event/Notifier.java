@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Notifier {
 	
-	public static Notifier quanLyDSMHNotifier = Notifier.instance("QuanLyDanhSachMatHang");
+	public static Notifier controllerNotifier = Notifier.instance("ControllerNotifier");
 	
 	static Map<String, Notifier> instances = new HashMap<String, Notifier>();
 	ArrayList<Observer> observers = new ArrayList<Observer>();

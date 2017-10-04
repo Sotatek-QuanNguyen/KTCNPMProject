@@ -1,4 +1,4 @@
-package View;
+package ViewController;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -12,8 +12,13 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 import Controller.BaseController;
+import Controller.QuanLyFactoryController;
 import Event.Command;
+import Event.Notifier;
+import Model.ObjectStatic;
+import View.BangDuLieu;
 import View.PanelInput;
+import View.PanelThemSuaXoa;
 import ViewController.BaseViewController;
 
 /**
@@ -22,10 +27,17 @@ import ViewController.BaseViewController;
 public abstract class PanelQuanLy<T> extends BaseViewController {
 	private JLabel title;
 	protected BangDuLieu<T> bang;
-	protected PanelThemSuaXoa quanLyView;
+	protected PanelThemSuaXoa themSuaXoaView;
 	protected PanelInput inputContent;
-	public void setQuanLyView(PanelThemSuaXoa quanLyView) {
-		this.quanLyView = quanLyView;
+	protected ObjectStatic object;
+	public PanelQuanLy() {
+		// TODO Auto-generated constructor stub
+		controller = new QuanLyFactoryController();
+		notifier = Notifier.controllerNotifier;
+		object = ObjectStatic.shareInstance();
+	}
+	public void setQuanLyView(PanelThemSuaXoa themSuaXoaView) {
+		this.themSuaXoaView = themSuaXoaView;
 	}
 	
 	public void setInputContent(PanelInput inputContent) {
@@ -40,12 +52,11 @@ public abstract class PanelQuanLy<T> extends BaseViewController {
 		this.setLayout(new BorderLayout());
 		notifier.addObserver(this);
 		title = new JLabel();
-//		add(title,BorderLayout.NORTH);
 		
-		if (bang!=null && quanLyView != null && inputContent != null){
+		if (bang!=null && themSuaXoaView != null && inputContent != null){
 			add(inputContent, BorderLayout.NORTH);
 			add(new JScrollPane(bang),BorderLayout.CENTER);
-			add(quanLyView, BorderLayout.SOUTH);
+			add(themSuaXoaView, BorderLayout.SOUTH);
 			
 		}
 

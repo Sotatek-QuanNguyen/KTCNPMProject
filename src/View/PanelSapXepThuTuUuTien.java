@@ -7,14 +7,17 @@ import javax.swing.JScrollPane;
 import Controller.BaseController;
 import Event.Command;
 import Model.DanhSachYeuCau;
+import Model.ObjectStatic;
 import Model.YeuCauChucNang;
+import ViewController.PanelQuanLy;
 
 public class PanelSapXepThuTuUuTien extends PanelQuanLy<DanhSachYeuCau> {
 	
-	protected BaseController<YeuCauChucNang> controller;
+	protected BaseController<YeuCauChucNang> controllerGlobal;
+	private ObjectStatic object;
 	protected DanhSachYeuCau dsyc;
 	public PanelSapXepThuTuUuTien() {
-		controller =  quanLyControler.takeConstroller(Command.CQuanLyDSYC);
+		controllerGlobal = controller.takeConstroller(Command.CQuanLyDSYC);
 		dsyc = new DanhSachYeuCau();
 		setQuanLyView(new PanelThemSuaXoaDanhSachYeuCau());
 		setBang(new BangDuLieuDanhSachYeuCau());
@@ -35,6 +38,15 @@ public class PanelSapXepThuTuUuTien extends PanelQuanLy<DanhSachYeuCau> {
 			YeuCauChucNang yccn = new YeuCauChucNang(moTa, loai);
 			dsyc.dsyc.add(yccn);
 			capNhatDSMH(dsyc);
+			break;
+		case RSuaYC:
+			System.out.println(bang.getSelectedRow());
+			object = ObjectStatic.shareInstance();
+			object = ObjectStatic.shareInstance();	
+			break;
+		
+		case RXoaYC:
+			System.out.println(bang.getSelectedRow());
 			break;
 
 		default:

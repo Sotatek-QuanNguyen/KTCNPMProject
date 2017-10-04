@@ -11,7 +11,7 @@ public abstract class BaseQLDSMHJDialog extends JDialog {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Notifier notifier = Notifier.quanLyDSMHNotifier;
+	public Notifier notifier = Notifier.controllerNotifier;
 	public void notifyObserver(Command command, Object data) {
 		notifier.notifyObserver(command.ordinal(), data);
 	}
