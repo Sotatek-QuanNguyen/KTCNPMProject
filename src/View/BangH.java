@@ -26,10 +26,10 @@ public class BangH extends BangDuLieu<Hs> {
         
 		DefaultTableModel model = new DefaultTableModel(columns,0);
 		for (int i = 0; i < listMH.size(); i++) {
-			int maMH = i;
-			double mucLuong = listMH.get(i).getMucLuong();
+			int maMH = i + 1;
+			int mucLuong = (int) listMH.get(i).getMucLuong();
 			int loai = listMH.get(i).getSoCanBo();
-			Object[] dataMH = {maMH,mucLuong,loai};
+			Object[] dataMH = {maMH, mucLuong,loai};
 			model.addRow(dataMH);
 		}
 		setModel(model);
