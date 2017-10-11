@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import Controller.BaseController;
 import Event.Command;
 import Model.H;
+import Model.Hs;
 import Model.YeuCauChucNang;
 import ViewController.PanelQuanLy2;
 
@@ -28,23 +29,27 @@ public class PanelH extends PanelQuanLy2<YeuCauChucNang>{
 		case RThemYC:
 		H h = new H(Float.parseFloat((((HView)viewInput).getfMucLuong().getText())), Integer.parseInt((((HView)viewInput).getfSoCanBo().getText())));
 		object.getListH().getListH().add(h);
-		capNhatDuLieu(object.getListH().getListH());
+		capNhatDuLieu(object.getListH());
+		
 			break;
 		case RSuaYC:
 		
 			break;
 		
 		case RXoaYC:
-	
+			int count = bang.getSelectedRow();
+			if(count == -1) return;
+			object.getListH().getListH().remove(count);
+			capNhatDuLieu(object.getListH());
 			break;
 
 		default:
 			break;
 		}
 	}
-	private void capNhatDuLieu(ArrayList<H> data) {
+	private void capNhatDuLieu(Hs data) {
 		// TODO Auto-generated method stub
-		
+		bang.setInputData(data);
 	}
 
 }

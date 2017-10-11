@@ -25,7 +25,7 @@ public class PanelEFW_EF_ES_PView extends PanelQuanLy<YeuCauChucNang> {
                     setTitle(""+object.getEf().getEFval());
 		
 			break;
-		case RSuaYC:
+		case ChangeES:
 		
 			break;
 		

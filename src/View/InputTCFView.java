@@ -10,10 +10,12 @@ import javax.swing.event.DocumentListener;
 import Event.Command;
 
 public class InputTCFView extends BaseView {
+	public InputTCFView() {
+	}
 
+    private JTextField textField_2;
     private JTextField textField;
     private JTextField textField_1;
-    private JTextField textField_2;
     private JTextField textField_3;
     private JTextField textField_4;
     private JTextField textField_5;
@@ -129,17 +131,17 @@ public class InputTCFView extends BaseView {
         JLabel lblGiTrXp = new JLabel("Giá trị xếp hạng");
         panel.add(lblGiTrXp);
 
+        textField = new JTextField();
+        textField.setColumns(10);
+        panel.add(textField);
+
         textField_1 = new JTextField();
         textField_1.setColumns(10);
         panel.add(textField_1);
 
         textField_2 = new JTextField();
-        textField_2.setColumns(10);
         panel.add(textField_2);
-
-        textField = new JTextField();
-        panel.add(textField);
-        textField.setColumns(10);
+        textField_2.setColumns(10);
 
         textField_3 = new JTextField();
         textField_3.setColumns(10);
@@ -189,7 +191,7 @@ public class InputTCFView extends BaseView {
                 if (textField.getText().equals("")) {
                     object.getTfw().setGtHTPT(0);
                 } else {
-                    object.getTfw().setGtHTPT(Integer.parseInt(textField.getText()));
+                    object.getTfw().setGtHTPT(Float.parseFloat(textField.getText()));
                 }
 
                 notifyObserver(Command.ChangeTCF, null);
@@ -198,7 +200,7 @@ public class InputTCFView extends BaseView {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtHTPT(Integer.parseInt(textField.getText()));
+                object.getTfw().setGtHTPT(Float.parseFloat(textField.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -217,7 +219,7 @@ public class InputTCFView extends BaseView {
                 if (textField_1.getText().equals("")) {
                     object.getTfw().setGtDUTT(0);
                 } else {
-                    object.getTfw().setGtDUTT(Integer.parseInt(textField_1.getText()));
+                    object.getTfw().setGtDUTT(Float.parseFloat(textField_1.getText()));
                 }
 
                 notifyObserver(Command.ChangeTCF, null);
@@ -226,7 +228,7 @@ public class InputTCFView extends BaseView {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtDUTT(Integer.parseInt(textField_1.getText()));
+                object.getTfw().setGtDUTT(Float.parseFloat(textField_1.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -245,7 +247,7 @@ public class InputTCFView extends BaseView {
                 if (textField_2.getText().equals("")) {
                     object.getTfw().setGtHQSDTT(0);
                 } else {
-                    object.getTfw().setGtHQSDTT(Integer.parseInt(textField_2.getText()));
+                    object.getTfw().setGtHQSDTT(Float.parseFloat(textField_2.getText()));
                 }
 
                 notifyObserver(Command.ChangeTCF, null);
@@ -254,7 +256,7 @@ public class InputTCFView extends BaseView {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtHQSDTT(Integer.parseInt(textField_2.getText()));
+                object.getTfw().setGtHQSDTT(Float.parseFloat(textField_2.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -272,7 +274,7 @@ public class InputTCFView extends BaseView {
                 if (textField_3.getText().equals("")) {
                     object.getTfw().setGtDPTXL(0);
                 } else {
-                    object.getTfw().setGtDPTXL(Integer.parseInt(textField_3.getText()));
+                    object.getTfw().setGtDPTXL(Float.parseFloat(textField_3.getText()));
                 }
 
                 notifyObserver(Command.ChangeTCF, null);
@@ -281,7 +283,7 @@ public class InputTCFView extends BaseView {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtDPTXL(Integer.parseInt(textField_3.getText()));
+                object.getTfw().setGtDPTXL(Float.parseFloat(textField_3.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -300,7 +302,7 @@ public class InputTCFView extends BaseView {
                 if (textField_4.getText().equals("")) {
                     object.getTfw().setGtTSDMN(0);
                 } else {
-                    object.getTfw().setGtTSDMN(Integer.parseInt(textField_4.getText()));
+                    object.getTfw().setGtTSDMN(Float.parseFloat(textField_4.getText()));
                 }
 
                 notifyObserver(Command.ChangeTCF, null);
@@ -309,7 +311,7 @@ public class InputTCFView extends BaseView {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtTSDMN(Integer.parseInt(textField_4.getText()));
+                object.getTfw().setGtTSDMN(Float.parseFloat(textField_4.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -327,7 +329,7 @@ public class InputTCFView extends BaseView {
                 if (textField_5.getText().equals("")) {
                     object.getTfw().setGtDSD(0);
                 } else {
-                    object.getTfw().setGtDSD(Integer.parseInt(textField_5.getText()));
+                    object.getTfw().setGtDSD(Float.parseFloat(textField_5.getText()));
                 }
 
                 notifyObserver(Command.ChangeTCF, null);
@@ -336,7 +338,7 @@ public class InputTCFView extends BaseView {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtDSD(Integer.parseInt(textField_5.getText()));
+                object.getTfw().setGtDSD(Float.parseFloat(textField_5.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -355,7 +357,7 @@ public class InputTCFView extends BaseView {
                 if (textField_6.getText().equals("")) {
                     object.getTfw().setGtDCD(0);
                 } else {
-                    object.getTfw().setGtDCD(Integer.parseInt(textField_6.getText()));
+                    object.getTfw().setGtDCD(Float.parseFloat(textField_6.getText()));
                 }
 
                 notifyObserver(Command.ChangeTCF, null);
@@ -364,7 +366,7 @@ public class InputTCFView extends BaseView {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtDCD(Integer.parseInt(textField_6.getText()));
+                object.getTfw().setGtDCD(Float.parseFloat(textField_6.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -382,16 +384,15 @@ public class InputTCFView extends BaseView {
                 if (textField_7.getText().equals("")) {
                     object.getTfw().setGtKNCD(0);
                 } else {
-                    object.getTfw().setGtKNCD(Integer.parseInt(textField_7.getText()));
+                    object.getTfw().setGtKNCD(Float.parseFloat(textField_7.getText()));
                 }
-
                 notifyObserver(Command.ChangeTCF, null);
             }
 
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtKNCD(Integer.parseInt(textField_7.getText()));
+                object.getTfw().setGtKNCD(Float.parseFloat(textField_7.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -410,7 +411,7 @@ public class InputTCFView extends BaseView {
                 if (textField_8.getText().equals("")) {
                     object.getTfw().setGtKNDTD(0);
                 } else {
-                    object.getTfw().setGtKNDTD(Integer.parseInt(textField_8.getText()));
+                    object.getTfw().setGtKNDTD(Float.parseFloat(textField_8.getText()));
                 }
 
                 notifyObserver(Command.ChangeTCF, null);
@@ -419,7 +420,7 @@ public class InputTCFView extends BaseView {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtKNDTD(Integer.parseInt(textField_8.getText()));
+                object.getTfw().setGtKNDTD(Float.parseFloat(textField_8.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -437,7 +438,7 @@ public class InputTCFView extends BaseView {
                 if (textField_9.getText().equals("")) {
                     object.getTfw().setGtSDDT(0);
                 } else {
-                    object.getTfw().setGtSDDT(Integer.parseInt(textField_9.getText()));
+                    object.getTfw().setGtSDDT(Float.parseFloat(textField_9.getText()));
                 }
 
                 notifyObserver(Command.ChangeTCF, null);
@@ -446,7 +447,7 @@ public class InputTCFView extends BaseView {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtSDDT(Integer.parseInt(textField_9.getText()));
+                object.getTfw().setGtSDDT(Float.parseFloat(textField_9.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -464,7 +465,7 @@ public class InputTCFView extends BaseView {
                 if (textField_10.getText().equals("")) {
                     object.getTfw().setGtBMDB(0);
                 } else {
-                    object.getTfw().setGtBMDB(Integer.parseInt(textField_10.getText()));
+                    object.getTfw().setGtBMDB(Float.parseFloat(textField_10.getText()));
                 }
 
                 notifyObserver(Command.ChangeTCF, null);
@@ -473,7 +474,7 @@ public class InputTCFView extends BaseView {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtBMDB(Integer.parseInt(textField_10.getText()));
+                object.getTfw().setGtBMDB(Float.parseFloat(textField_10.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -491,7 +492,7 @@ public class InputTCFView extends BaseView {
                 if (textField_11.getText().equals("")) {
                     object.getTfw().setGtTN3P(0);
                 } else {
-                    object.getTfw().setGtTN3P(Integer.parseInt(textField_11.getText()));
+                    object.getTfw().setGtTN3P(Float.parseFloat(textField_11.getText()));
                 }
 
                 notifyObserver(Command.ChangeTCF, null);
@@ -500,7 +501,7 @@ public class InputTCFView extends BaseView {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtTN3P(Integer.parseInt(textField_11.getText()));
+                object.getTfw().setGtTN3P(Float.parseFloat(textField_11.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -518,7 +519,7 @@ public class InputTCFView extends BaseView {
                 if (textField_12.getText().equals("")) {
                     object.getTfw().setGtPTDTDB(0);
                 } else {
-                    object.getTfw().setGtPTDTDB(Integer.parseInt(textField_12.getText()));
+                    object.getTfw().setGtPTDTDB(Float.parseFloat(textField_12.getText()));
                 }
 
                 notifyObserver(Command.ChangeTCF, null);
@@ -527,7 +528,7 @@ public class InputTCFView extends BaseView {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 // TODO Auto-generated method stub
-                object.getTfw().setGtPTDTDB(Integer.parseInt(textField_12.getText()));
+                object.getTfw().setGtPTDTDB(Float.parseFloat(textField_12.getText()));
                 notifyObserver(Command.ChangeTCF, null);
             }
 
@@ -538,5 +539,4 @@ public class InputTCFView extends BaseView {
             }
         });
     }
-
 }

@@ -5,9 +5,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class OutPutView extends BaseView {
-	private JLabel lGpm;
-	private JLabel lLT;
-	private JLabel lC;
+	public OutPutView() {
+	}
 	private JLabel lG;
 	private JLabel lH;
 	private JLabel lE;
@@ -18,6 +17,17 @@ public class OutPutView extends BaseView {
 	private JLabel lUUCP;
 	private JLabel lTBF;
 	private JLabel lTAW;
+	private JLabel lES;
+	public JLabel getlES() {
+		return lES;
+	}
+
+
+
+	public void setlES(JLabel lES) {
+		this.lES = lES;
+	}
+
 
 	@Override
 	protected void setup() {
@@ -58,14 +68,8 @@ setLayout(new GridLayout(1, 2, 0, 0));
 		JLabel lblG = new JLabel("G");
 		panel_1.add(lblG);
 		
-		JLabel lblC = new JLabel("C");
-		panel_1.add(lblC);
-		
-		JLabel lblLt = new JLabel("LT");
-		panel_1.add(lblLt);
-		
-		JLabel lblNewLabel = new JLabel("Gpm");
-		panel_1.add(lblNewLabel);
+		JLabel lblEs = new JLabel("ES");
+		panel_1.add(lblEs);
 		
 		JPanel panel = new JPanel();
 		add(panel);
@@ -101,39 +105,11 @@ setLayout(new GridLayout(1, 2, 0, 0));
 		lG = new JLabel("0");
 		panel.add(lG);
 		
-		lC = new JLabel("0");
-		panel.add(lC);
-		
-		lLT = new JLabel("0");
-		panel.add(lLT);
-		
-		lGpm = new JLabel("0");
-		panel.add(lGpm);
+		lES = new JLabel("0");
+		panel.add(lES);
 	}
 
-	public JLabel getlGpm() {
-		return lGpm;
-	}
 
-	public void setlGpm(JLabel lGpm) {
-		this.lGpm = lGpm;
-	}
-
-	public JLabel getlLT() {
-		return lLT;
-	}
-
-	public void setlLT(JLabel lLT) {
-		this.lLT = lLT;
-	}
-
-	public JLabel getlC() {
-		return lC;
-	}
-
-	public void setlC(JLabel lC) {
-		this.lC = lC;
-	}
 
 	public JLabel getlG() {
 		return lG;
@@ -151,7 +127,7 @@ setLayout(new GridLayout(1, 2, 0, 0));
 		this.lH = lH;
 	}
 
-	public Component getlE() {
+	public JLabel getlE() {
 		return lE;
 	}
 
@@ -159,7 +135,7 @@ setLayout(new GridLayout(1, 2, 0, 0));
 		this.lE = lE;
 	}
 
-	public Component getlP() {
+	public JLabel getlP() {
 		return lP;
 	}
 
@@ -167,7 +143,7 @@ setLayout(new GridLayout(1, 2, 0, 0));
 		this.lP = lP;
 	}
 
-	public Component getlAUCP() {
+	public JLabel getlAUCP() {
 		return lAUCP;
 	}
 

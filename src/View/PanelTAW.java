@@ -19,7 +19,7 @@ public class PanelTAW extends PanelQuanLy<DanhSachYeuCau> {
 		setInputContent(new InputTAWView());
 		setImportExcel(new PanelImportExcelTAW());
 		setup();
-		setTitle("TAW = ");
+		setTitle("TAW = 0");
 		
 	}
 	@Override

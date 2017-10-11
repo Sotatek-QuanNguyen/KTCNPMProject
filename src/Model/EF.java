@@ -10,14 +10,14 @@ package Model;
  * @author nguye
  */
 public class EF {
-    private int gtxhRUP;
-    private int gtxhUDTT;
-    private int gtxhHDT;
-    private int gtxhLDN;
-    private int gtxhTCND;
-    private int gtxhODYC;
-    private int gtxhNVBTG;
-    private int gtxhNNLTK;
+    private float gtxhRUP;
+    private float gtxhUDTT;
+    private float gtxhHDT;
+    private float gtxhLDN;
+    private float gtxhTCND;
+    private float gtxhODYC;
+    private float gtxhNVBTG;
+    private float gtxhNNLTK;
     private float EFWval;
     private float EFval;
     
@@ -30,7 +30,7 @@ public class EF {
     public static final float NVBTG = -1f;
     public static final float NNLTK = -1f;
 
-    public EF(int gtxhRUP, int gtxhUDTT, int gtxhHDT, int gtxhLDN, int gtxhTCND, int gtxhODYC, int gtxhNVBTG, int gtxhNNLTK) {
+    public EF(float gtxhRUP, float gtxhUDTT, float gtxhHDT, float gtxhLDN, float gtxhTCND, float gtxhODYC, float gtxhNVBTG, float gtxhNNLTK) {
         this.gtxhRUP = gtxhRUP;
         this.gtxhUDTT = gtxhUDTT;
         this.gtxhHDT = gtxhHDT;
@@ -45,67 +45,67 @@ public class EF {
         this.EFval = 1.4f + (-0.03f*EFWval);
     }
 
-    public int getGtxhRUP() {
+    public float getGtxhRUP() {
         return gtxhRUP;
     }
 
-    public void setGtxhRUP(int gtxhRUP) {
+    public void setGtxhRUP(float gtxhRUP) {
         this.gtxhRUP = gtxhRUP;
     }
 
-    public int getGtxhUDTT() {
+    public float getGtxhUDTT() {
         return gtxhUDTT;
     }
 
-    public void setGtxhUDTT(int gtxhUDTT) {
+    public void setGtxhUDTT(float gtxhUDTT) {
         this.gtxhUDTT = gtxhUDTT;
     }
 
-    public int getGtxhHDT() {
+    public float getGtxhHDT() {
         return gtxhHDT;
     }
 
-    public void setGtxhHDT(int gtxhHDT) {
+    public void setGtxhHDT(float gtxhHDT) {
         this.gtxhHDT = gtxhHDT;
     }
 
-    public int getGtxhLDN() {
+    public float getGtxhLDN() {
         return gtxhLDN;
     }
 
-    public void setGtxhLDN(int gtxhLDN) {
+    public void setGtxhLDN(float gtxhLDN) {
         this.gtxhLDN = gtxhLDN;
     }
 
-    public int getGtxhTCND() {
+    public float getGtxhTCND() {
         return gtxhTCND;
     }
 
-    public void setGtxhTCND(int gtxhTCND) {
+    public void setGtxhTCND(float gtxhTCND) {
         this.gtxhTCND = gtxhTCND;
     }
 
-    public int getGtxhODYC() {
+    public float getGtxhODYC() {
         return gtxhODYC;
     }
 
-    public void setGtxhODYC(int gtxhODYC) {
+    public void setGtxhODYC(float gtxhODYC) {
         this.gtxhODYC = gtxhODYC;
     }
 
-    public int getGtxhNVBTG() {
+    public float getGtxhNVBTG() {
         return gtxhNVBTG;
     }
 
-    public void setGtxhNVBTG(int gtxhNVBTG) {
+    public void setGtxhNVBTG(float gtxhNVBTG) {
         this.gtxhNVBTG = gtxhNVBTG;
     }
 
-    public int getGtxhNNLTK() {
+    public float getGtxhNNLTK() {
         return gtxhNNLTK;
     }
 
-    public void setGtxhNNLTK(int gtxhNNLTK) {
+    public void setGtxhNNLTK(float gtxhNNLTK) {
         this.gtxhNNLTK = gtxhNNLTK;
     }
 
@@ -122,6 +122,5 @@ public class EF {
 
     public static void main(String[] args) {
         EF test = new EF(1,2,3,4,5,1,2,3);
-        System.out.println(test.getEFWval());
     }
 }

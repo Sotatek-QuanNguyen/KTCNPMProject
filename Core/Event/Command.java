@@ -2,7 +2,7 @@ package Event;
 
 public enum Command {
 	ChangeTAW,ChangeTCF,ChangeEF,ChangeTBF,
-	VShowFormThemMH,VShowFormSuaMH,CHandleXoaMH,CHandleTimKiemMH,
+	ChangeH,ChangeES,CHandleXoaMH,CHandleTimKiemMH,
 	Error,
 	CQuanLyDSYC,CQuanLyDSDH,
 	RThemYC,
@@ -25,9 +25,9 @@ public enum Command {
         case 3:
         	return ChangeTBF;
         case 4:
-            return VShowFormThemMH;
+            return ChangeH;
         case 5:
-            return VShowFormSuaMH;
+            return ChangeES;
         case 6:
         	return CHandleXoaMH;
         case 7:

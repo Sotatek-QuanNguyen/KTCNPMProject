@@ -17,6 +17,7 @@ import Event.Command;
 import Event.Notifier;
 import Model.ObjectStatic;
 import View.BangDuLieu;
+import View.BangH;
 import View.BaseView;
 import View.InputFromExcel;
 import View.PanelThemSuaXoa;
@@ -29,7 +30,7 @@ import java.awt.GridLayout;
  */
 public abstract class PanelQuanLy2<T> extends BaseViewController {
 	private JLabel title;
-	protected BangDuLieu<T> bang;
+	protected BangH bang;
 	protected PanelThemSuaXoa themSuaXoaView;
 	protected BaseView viewInput;
 	protected ObjectStatic object;
@@ -59,7 +60,7 @@ public abstract class PanelQuanLy2<T> extends BaseViewController {
 	public void setImportExcel(InputFromExcel importExcel) {
 		this.importExcel = importExcel;
 	}
-	public void setBang(BangDuLieu bang) {
+	public void setBang(BangH bang) {
 		this.bang = bang;
 	}
 	

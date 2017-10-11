@@ -20,9 +20,11 @@ public class Hs {
 	
 	public float getH() {
 		float tongTien = 0;
+		float socb = 0;
 		for (int i = 0; i < listH.size(); i++) {
 			tongTien += listH.get(i).getSoCanBo() * listH.get(i).getMucLuong();
+			socb += listH.get(i).getSoCanBo();
 		}
-		return tongTien/160;
+		return tongTien/(160*socb);
 	}
 }
