@@ -58,6 +58,7 @@ public class PanelOutput extends PanelQuanLy<YeuCauChucNang>{
 			((OutPutView)viewInput).getlG().setText(""+object.getG());
 		case ChangeES:
 			((OutPutView)viewInput).getlES().setText(""+object.getEs().getES());
+			((OutPutView)viewInput).getlG().setText(""+object.getG());
 		default:
 			break;
 		}

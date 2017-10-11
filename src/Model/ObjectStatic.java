@@ -91,6 +91,7 @@ public class ObjectStatic {
 	}
 	
 	public float getG() {
+		System.out.println(getE()+","+getP()+","+getListH().getH());
 		return (float) (1.4*getE()*getP()*getListH().getH());
 	}
 	public void setTfw(TFW tfw) {

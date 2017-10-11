@@ -9,6 +9,8 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
 public class InputTBFView extends BaseView {
+	public InputTBFView() {
+	}
 	private JTextField tT_easy;
         private JTextField tT_normal;
 	private JTextField tT_hard;
@@ -102,7 +104,7 @@ setLayout(new GridLayout(3, 1, 0, 20));
 		JLabel label_22 = new JLabel("5");
 		panel_2.add(label_22);
 		
-		JLabel label_23 = new JLabel("1");
+		JLabel label_23 = new JLabel("1,2");
 		panel_2.add(label_23);
 		
 		tM_easy = new JTextField();
@@ -114,7 +116,7 @@ setLayout(new GridLayout(3, 1, 0, 20));
 		JLabel label_25 = new JLabel("10");
 		panel_2.add(label_25);
 		
-		JLabel label_26 = new JLabel("1");
+		JLabel label_26 = new JLabel("1,2");
 		panel_2.add(label_26);
 		
 		tM_mornal = new JTextField();
@@ -126,7 +128,7 @@ setLayout(new GridLayout(3, 1, 0, 20));
 		JLabel label_28 = new JLabel("15");
 		panel_2.add(label_28);
 		
-		JLabel label_29 = new JLabel("1");
+		JLabel label_29 = new JLabel("1,2");
 		panel_2.add(label_29);
 		
 		tM_hard = new JTextField();
@@ -156,7 +158,7 @@ setLayout(new GridLayout(3, 1, 0, 20));
 		JLabel label_2 = new JLabel("5");
 		panel_1.add(label_2);
 		
-		JLabel lblNewLabel_1 = new JLabel("1");
+		JLabel lblNewLabel_1 = new JLabel("1,5");
 		panel_1.add(lblNewLabel_1);
 		
 		tT_easy = new JTextField();
@@ -168,7 +170,7 @@ setLayout(new GridLayout(3, 1, 0, 20));
 		JLabel lblNewLabel_4 = new JLabel("10");
 		panel_1.add(lblNewLabel_4);
 		
-		JLabel label_3 = new JLabel("1");
+		JLabel label_3 = new JLabel("1,5");
 		panel_1.add(label_3);
                 
 		tT_normal = new JTextField();
@@ -180,7 +182,7 @@ setLayout(new GridLayout(3, 1, 0, 20));
 		JLabel label_5 = new JLabel("15");
 		panel_1.add(label_5);
 		
-		JLabel label_6 = new JLabel("1");
+		JLabel label_6 = new JLabel("1,5");
 		panel_1.add(label_6);
 		
 		tT_hard = new JTextField();
