@@ -22,7 +22,7 @@ public class PanelEFW_EF_ES_PView extends PanelQuanLy<YeuCauChucNang> {
 		super.update(command, data);
 		switch (command) {
 		case ChangeEF:
-                    setTitle(""+object.getEf().getEFval());
+                    setTitle("EF = "+object.getEf().getEFval());
 		
 			break;
 		case ChangeES:
